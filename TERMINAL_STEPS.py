@@ -31,3 +31,25 @@
 # docker build -t spark-demo-app .
 # docker run -it --rm -p 8080:8080 -v "$(pwd):/workspace" spark-demo-app
 # {Copy the url from the terminal and open it in the browser to see the spark demo app,jupyter notebook will open in the browser}
+
+#=========Now for kafka-basic folder============
+# cd..
+# cd kafka-basic
+# docker compose up --build
+
+# docker compose down {i have not run this}
+
+# -------------------------------------------
+#{OPEN New terminal while not closing the previous,and run the below commands}
+
+# docker exec -it kafka bash
+# {NOW make a topic and run it }
+
+#/opt/kafka/bin/kafka-topics.sh \
+# --create \
+# --topic demo-topic \
+# --bootstrap-server localhost:9092
+
+# /opt/kafka/bin/kafka-topics.sh \
+# --list \
+# --bootstrap-server localhost:9092
