@@ -1,0 +1,3 @@
+Welcome email sent to john@test.com
+Welcome email sent to alice@test.com
+Welcome email sent to bob@test.com

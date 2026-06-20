@@ -53,3 +53,32 @@
 # /opt/kafka/bin/kafka-topics.sh \
 # --list \
 # --bootstrap-server localhost:9092
+
+#=========Now for airflow-basic folder============
+#{Airflow Password for user 'admin': CGcqzBZx5sRqur75}
+
+# cd docker_demo
+# cd airflow-basic
+# docker compose up --build
+# docker compose up -d
+# docker ps
+
+# docker exec -it airflow-webserver airflow version
+# docker exec -it airflow airflow dags list
+# [if error aa jaye]
+# docker exec -it airflow airflow dags list-import-errors
+# docker exec -it airflow airflow dags list
+
+# {iske baad bhi airflow ke dags me customer_onboarding nhi aaye to run these commands:-}
+# docker exec -it airflow ls -la /opt/airflow/dags
+# docker exec -it airflow python -c "import sys; sys.path.append('/opt/airflow/dags'); import customer_pipeline; print(customer_pipeline.dag)"
+# docker exec -it airflow airflow dags reserialize
+# docker exec -it airflow airflow dags list
+
+# [customer_onboarding aa jane ke baad use trigger krna h usse hii output me file banegiii]
+
+# {Some extra commands which should be run in bash,i.e.,VS Code → Terminal (Using Now ) → New Terminal}:-
+# docker exec -it airflow bash
+# ls -la /workspaces/docker-demo/airflow-basic/dags
+# sudo chown -R codespace:codespace /workspaces/docker-demo/airflow-basic
+# touch /workspaces/docker-demo/airflow-basic/dags/test.py (Creates an empty "test.py" file.)
